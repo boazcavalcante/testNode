@@ -13,4 +13,4 @@ app.post('/data', (req, res) => {
   data.push({ id: `${id}`, value: `${req.body.count}` });
   console.log("Data: ", data);
 });
-app.listen(3333, console.log("Servidor rodando"));
+app.listen(process.env.PORT || 3333, console.log("Servidor rodando"));
